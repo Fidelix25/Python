@@ -1,6 +1,8 @@
 ### Desafio - Refatorar o projeto da aula anterior evitando Bugs!
 
 # 1) Solicita ao usuário que digite seu nome
+dicionario = {}
+
 nome_valido: bool = False
 salario_valido: bool = False
 bonus_valido: bool = False
@@ -51,4 +53,8 @@ bonus_recebido: float = round(1000 + salario * float(bonus), 3)
 # 5) Imprime a mensagem personalizada incluindo o nome do usuário, salário e bônus
 print(f"{nome}, seu salário é de R${salario} e seu bônus final é R${bonus_recebido}")
 
-# Bônus: Quantos bugs e riscos você consegue identificar nesse programa?
+dicionario.update(
+    {"nome": nome, "salario": salario, "bonus": bonus, "bonus_recebido": bonus_recebido}
+)
+
+print(dicionario)
